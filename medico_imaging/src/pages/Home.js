@@ -3,11 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import './Home.css';
 import '../styles/Home.css'
+import AppAppBar from '../components/AppAppBar';
+// import Navbar from '../components/AppAppBar'
 
 const Home = () => {
   return (
     <div className="home">
       <header>
+        <AppAppBar/>
         <h1>Welcome to Medico Imaging</h1>
         <nav>
           <ul>
