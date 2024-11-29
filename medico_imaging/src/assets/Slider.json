@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,
+      "name": "Sonography Machine",
+      "description": "A high-performance sonography machine used for diagnostic imaging. Features include high resolution and real-time imaging for various applications.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/350539251/KQ/ZO/SO/1953739/ge-logiq-p6-ultrasound-machine-500x500.jpg"
+    },
+    {
+      "id": 2,
+      "name": "CR Machines",
+      "description": "Computed Radiography (CR) systems for digital X-ray imaging, providing high-quality diagnostic images with quick processing times.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/350548526/RG/SB/UM/1953739/fujifilm-cr-system-500x500.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Hospital Equipment",
+      "description": "Comprehensive range of hospital equipment, including diagnostic imaging, monitoring, and therapeutic devices for healthcare facilities.",
+      "image_url": "http://5.imimg.com/data5/SELLER/Default/2023/10/353017489/OK/DT/IM/1953739/ge-oec-9800-plus-cardiac-c-arm-1000x1000.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "X-Ray Machine",
+      "description": "X-ray machine for a wide variety of diagnostic imaging needs, offering high-quality imaging with quick and efficient operation.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/353032822/MK/HB/VA/1953739/x-ray-cassettes-1000x1000.jpg"
+    },
+    {
+      "id": 5,
+      "name": "C Arm Machine",
+      "description": "A versatile imaging system used in surgical and diagnostic applications, providing real-time X-ray images for guidance during procedures.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/350550363/BY/FC/FA/1953739/refurbished-meditronics-lf-c-arm-machine-500x500.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Refurbished CT Scanner",
+      "description": "A refurbished CT scanner offering high-resolution imaging for detailed cross-sectional views of the body, suitable for a variety of diagnostic needs.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/353043289/UI/ZX/BY/1953739/siemens-ct-scan-machine-1000x1000.jpg"
+    },
+
+    {
+      "id": 7,
+      "name": "Point Of Care Ultrasound",
+      "description": "Portable ultrasound system designed for use at the point of care, enabling fast and accurate diagnostics in emergency or critical settings.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2021/2/YH/FB/LV/1953739/hitachi-aloka-alpha-6-ultrasound-machine-500x500.jpg"
+    }
+  ]
+  

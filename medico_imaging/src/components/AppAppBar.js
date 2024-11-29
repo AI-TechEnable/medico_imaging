@@ -11,8 +11,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-// import Sitemark from './SitemarkIcon';
-// import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
+import MonitorHeartTwoToneIcon from '@mui/icons-material/MonitorHeartTwoTone';
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -37,6 +40,18 @@ export default function AppAppBar() {
     setOpen(newOpen);
   };
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open1 = Boolean(anchorEl);
+
   return (
     <AppBar
       position="fixed"
@@ -51,28 +66,13 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            {/* <Sitemark /> */}
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Features
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Testimonials
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Highlights
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Pricing
-              </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                FAQ
-              </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Blog
+              <MonitorHeartTwoToneIcon/>
+              <Button variant="text" color="red" size="small" sx={{ color: 'black' }}>
+                Medico imaging services
               </Button>
             </Box>
-          </Box>
+          </Box>  
           <Box
             sx={{
               display: { xs: 'none', md: 'flex' },
@@ -80,13 +80,41 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
+            {/* <p><Link to="/products">Explore Products</Link></p> */}
+            <Button variant="text" color="info" size="small"sx={{ color: 'black' }}>
+            <Link to="/products">Explore Products</Link>
+            </Button>
             <Button color="primary" variant="text" size="small">
-              Sign in
+            <div>
+                <Typography
+                  aria-owns={open1 ? 'mouse-over-popover' : undefined}
+                  aria-haspopup="true"
+                  onMouseEnter={handlePopoverOpen}
+                  onMouseLeave={handlePopoverClose}
+                >
+                  <LocalPostOfficeIcon/>  
+                </Typography>
+                <Popover
+                  id="mouse-over-popover"
+                  sx={{ pointerEvents: 'none' }}
+                  open={open1}
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                  }}
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
+                  onClose={handlePopoverClose}
+                  disableRestoreFocus
+                >
+                  <Typography sx={{ p: 1 , bgcolor:'transperent',fontSize:'15px'}}>Get Instant Quotes</Typography>
+                </Popover>
+              </div>
             </Button>
-            <Button color="primary" variant="contained" size="small">
-              Sign up
-            </Button>
-            {/* <ColorModeIconDropdown /> */}
+     
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
             {/* <ColorModeIconDropdown size="medium" /> */}

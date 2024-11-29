@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
 
 const Header = () => (
   <HeaderWrapper>
-    <h1>Medico Imaging</h1>
+    {/* <h1>Medico Imaging</h1> */}
   </HeaderWrapper>
 );
 
