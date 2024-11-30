@@ -84,6 +84,9 @@ export default function AppAppBar() {
             <Button variant="text" color="info" size="small"sx={{ color: 'black' }}>
             <Link to="/products">Explore Products</Link>
             </Button>
+            <Button variant="text" color="info" size="small" sx={{ color: 'black' }}>
+              <Link to="/About">About Us</Link>
+            </Button>
             <Button color="primary" variant="text" size="small">
             <div>
                 <Typography

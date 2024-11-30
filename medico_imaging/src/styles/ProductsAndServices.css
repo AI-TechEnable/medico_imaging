@@ -1,0 +1,80 @@
+/* General styling for the Products & Services component */
+.products-services {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .products-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .products-services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .products-services h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .products-services p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .product-item h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-item p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .cta .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .cta .btn:hover {
+    background-color: #0056b3;
+  }
+  
