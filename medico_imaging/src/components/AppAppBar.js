@@ -66,7 +66,7 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' } ,color:'#004D99' }}>
               <MonitorHeartTwoToneIcon/>
               <Button variant="text" color="red" size="small" sx={{ color: 'black' }}>
                 Medico imaging services
@@ -146,8 +146,8 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
+                <MenuItem>Explore Products</MenuItem>
+                <MenuItem>About Us</MenuItem>
                 <MenuItem>Highlights</MenuItem>
                 <MenuItem>Pricing</MenuItem>
                 <MenuItem>FAQ</MenuItem>

@@ -1,0 +1,57 @@
+/* Variation 1: Clean & Modern */
+.design-variation-1 .MuiTypography-h4 {
+    color: #333;
+  }
+  
+  .design-variation-1 .MuiTypography-body1 {
+    color: #777;
+  }
+  
+  .design-variation-1 .MuiCard-root {
+    background-color: #fff;
+    border: 1px solid #eee;
+  }
+  
+  .design-variation-1 .MuiCard-root:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Variation 2: Bold & Colorful */
+  .design-variation-2 .MuiTypography-h4 {
+    color: #2196f3;
+  }
+  
+  .design-variation-2 .MuiTypography-body1 {
+    color: #666;
+  }
+  
+  .design-variation-2 .MuiCard-root {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .design-variation-2 .MuiCard-root:hover {
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.4);
+  }
+  
+  /* Variation 3: Card-Focused */
+  .design-variation-3 .MuiTypography-h4 {
+    color: #444;
+  }
+  
+  .design-variation-3 .MuiTypography-body1 {
+    color: #555;
+  }
+  
+  .design-variation-3 .MuiCard-root {
+    background-color: #f9f9f9;
+  }
+  
+  .design-variation-3 .MuiCard-root:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .design-variation-3 .MuiCard-root img {
+    height: 200px;
+    object-fit: cover;
+  }

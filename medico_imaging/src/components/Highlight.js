@@ -12,46 +12,64 @@
 // import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 // import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 
-// const items = [
+// const categoriesData = [
+//   // Example JSON data for categories
 //   {
-//     icon: <SettingsSuggestRoundedIcon />,
-//     title: 'Adaptable performance',
-//     description:
-//       'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
-//   },
-//   {
-//     icon: <ConstructionRoundedIcon />,
-//     title: 'Built to last',
-//     description:
-//       'Experience unmatched durability that goes above and beyond with lasting investment.',
-//   },
-//   {
-//     icon: <ThumbUpAltRoundedIcon />,
-//     title: 'Great user experience',
-//     description:
-//       'Integrate our product into your routine with an intuitive and easy-to-use interface.',
-//   },
-//   {
+//     name: 'Smartphones',
 //     icon: <AutoFixHighRoundedIcon />,
-//     title: 'Innovative functionality',
-//     description:
-//       'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+//     description: 'High-tech phones with all the latest features.',
 //   },
 //   {
-//     icon: <SupportAgentRoundedIcon />,
-//     title: 'Reliable support',
-//     description:
-//       'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
+//     name: 'Laptops',
+//     icon: <ConstructionRoundedIcon />,
+//     description: 'Durable and efficient laptops for work and play.',
 //   },
 //   {
+//     name: 'Accessories',
+//     icon: <ThumbUpAltRoundedIcon />,
+//     description: 'Stylish accessories to enhance your tech experience.',
+//   },
+//   {
+//     name: 'Home Appliances',
+//     icon: <SettingsSuggestRoundedIcon />,
+//     description: 'Innovative home appliances designed for convenience.',
+//   },
+//   {
+//     name: 'Gaming',
 //     icon: <QueryStatsRoundedIcon />,
-//     title: 'Precision in every detail',
-//     description:
-//       'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+//     description: 'Cutting-edge gaming products for an immersive experience.',
 //   },
+//   {
+//     name: 'Wearables',
+//     icon: <SupportAgentRoundedIcon />,
+//     description: 'Track your health with our wearable devices.',
+//   },
+//   {
+//     name: 'Wearables',
+//     icon: <SupportAgentRoundedIcon />,
+//     description: 'Track your health with our wearable devices.',
+//   },
+//   {
+//     name: 'Wearables',
+//     icon: <SupportAgentRoundedIcon />,
+//     description: 'Track your health with our wearable devices.',
+//   },
+//   // Add more categories as necessary
 // ];
 
 // export default function Highlights() {
+//   const [categories, setCategories] = React.useState([]);
+//   const [showAll, setShowAll] = React.useState(false);
+
+//   // Fetch categories data (simulated here as static data)
+//   React.useEffect(() => {
+//     // Assuming categoriesData is fetched from an external source
+//     setCategories(categoriesData);
+//   }, []);
+
+//   // Handle showing more categories
+//   const categoriesToShow = showAll ? categories : categories.slice(0, 5);
+
 //   return (
 //     <Box
 //       id="highlights"
@@ -78,17 +96,15 @@
 //           }}
 //         >
 //           <Typography component="h2" variant="h4" gutterBottom>
-//             Highlights
+//             Categories
 //           </Typography>
 //           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-//             Explore why our product stands out: adaptability, durability,
-//             user-friendly design, and innovation. Enjoy reliable customer support and
-//             precision in every detail.
+//             Discover the wide range of products available across various categories.
 //           </Typography>
 //         </Box>
 //         <Grid container spacing={2}>
-//           {items.map((item, index) => (
-//             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+//           {categoriesToShow.map((category, index) => (
+//             <Grid item xs={12} sm={6} md={4} key={index}>
 //               <Stack
 //                 direction="column"
 //                 component={Card}
@@ -102,92 +118,78 @@
 //                   backgroundColor: 'grey.800',
 //                 }}
 //               >
-//                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
+//                 <Box sx={{ opacity: '50%' }}>{category.icon}</Box>
 //                 <div>
 //                   <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
-//                     {item.title}
+//                     {category.name}
 //                   </Typography>
 //                   <Typography variant="body2" sx={{ color: 'grey.400' }}>
-//                     {item.description}
+//                     {category.description}
 //                   </Typography>
 //                 </div>
 //               </Stack>
 //             </Grid>
 //           ))}
 //         </Grid>
+//         {categories.length > 4 && (
+//           <Box sx={{ mt: 3 }}>
+//             <Typography
+//               component="button"
+//               variant="body2"
+//               onClick={() => setShowAll((prev) => !prev)}
+//               sx={{
+//                 color: 'primary.main',
+//                 cursor: 'pointer',
+//                 textDecoration: 'underline',
+//               }}
+//             >
+//               {showAll ? 'Show Less' : 'See More'}
+//             </Typography>
+//           </Box>
+//         )}
 //       </Container>
 //     </Box>
 //   );
 // }
 
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
-
-const categoriesData = [
-  // Example JSON data for categories
-  {
-    name: 'Smartphones',
-    icon: <AutoFixHighRoundedIcon />,
-    description: 'High-tech phones with all the latest features.',
-  },
-  {
-    name: 'Laptops',
-    icon: <ConstructionRoundedIcon />,
-    description: 'Durable and efficient laptops for work and play.',
-  },
-  {
-    name: 'Accessories',
-    icon: <ThumbUpAltRoundedIcon />,
-    description: 'Stylish accessories to enhance your tech experience.',
-  },
-  {
-    name: 'Home Appliances',
-    icon: <SettingsSuggestRoundedIcon />,
-    description: 'Innovative home appliances designed for convenience.',
-  },
-  {
-    name: 'Gaming',
-    icon: <QueryStatsRoundedIcon />,
-    description: 'Cutting-edge gaming products for an immersive experience.',
-  },
-  {
-    name: 'Wearables',
-    icon: <SupportAgentRoundedIcon />,
-    description: 'Track your health with our wearable devices.',
-  },
-  {
-    name: 'Wearables',
-    icon: <SupportAgentRoundedIcon />,
-    description: 'Track your health with our wearable devices.',
-  },
-  {
-    name: 'Wearables',
-    icon: <SupportAgentRoundedIcon />,
-    description: 'Track your health with our wearable devices.',
-  },
-  // Add more categories as necessary
-];
+import { supabase } from '../supasbaseClient';
 
 export default function Highlights() {
   const [categories, setCategories] = React.useState([]);
   const [showAll, setShowAll] = React.useState(false);
 
-  // Fetch categories data (simulated here as static data)
+  // Fetch categories from Supabase
   React.useEffect(() => {
-    // Assuming categoriesData is fetched from an external source
-    setCategories(categoriesData);
+    getCategories();
   }, []);
+
+  async function getCategories() {
+    try {
+      const response = await supabase
+        .from('Product Categories')
+        .select('*')
+        .limit(10);
+
+      if (response.error) {
+        throw response.error;
+      }
+
+      const data = response.data;
+      if (data != null) {
+        setCategories(data);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }
 
   // Handle showing more categories
   const categoriesToShow = showAll ? categories : categories.slice(0, 5);
@@ -196,10 +198,10 @@ export default function Highlights() {
     <Box
       id="highlights"
       sx={{
-        pt: { xs: 4, sm: 12 },
+        pt: { xs: 4, sm: 8 },
         pb: { xs: 8, sm: 16 },
         color: 'white',
-        bgcolor: 'grey.900',
+        bgcolor: 'grey.100',
       }}
     >
       <Container
@@ -220,11 +222,11 @@ export default function Highlights() {
           <Typography component="h2" variant="h4" gutterBottom>
             Categories
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
+          <Typography variant="body1" sx={{ color: 'red' }}>
             Discover the wide range of products available across various categories.
           </Typography>
         </Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ maxWidth: '1200px', margin: '0 auto' }}>
           {categoriesToShow.map((category, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <Stack
@@ -237,23 +239,45 @@ export default function Highlights() {
                   p: 3,
                   height: '100%',
                   borderColor: 'hsla(220, 25%, 25%, 0.3)',
-                  backgroundColor: 'grey.800',
+                  backgroundColor: '#004D99',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
                 }}
               >
-                <Box sx={{ opacity: '50%' }}>{category.icon}</Box>
+                <Box sx={{ opacity: '50%' }}>
+                  {/* Render an image based on the category */}
+                  <img
+                    src={category.image_url}
+                    alt={category.category_name}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      objectFit: 'cover',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </Box>
                 <div>
                   <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
-                    {category.name}
+                    {category.category_name}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
-                    {category.description}
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'grey.400',
+                      whiteSpace: 'normal',
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    {category.category_description}
                   </Typography>
                 </div>
               </Stack>
             </Grid>
           ))}
         </Grid>
-        {categories.length > 4 && (
+        {categories.length > 5 && (
           <Box sx={{ mt: 3 }}>
             <Typography
               component="button"
