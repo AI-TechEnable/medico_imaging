@@ -14,6 +14,7 @@ import { supabase } from '../supasbaseClient';
 const Home = () => {
 
   const[products,setProducts]=useState([]);
+  console.log(products);
 
   useEffect(()=>{
     getProducts();
@@ -47,11 +48,11 @@ const Home = () => {
       <AppAppBar/>
       <Hero/>
 
-      {products.map((product)=>(
+      {/* {products.map((product)=>(
         <div key={product.id}>
-          <li>{product.category_name}</li>
+          <li>{product.image_url}</li>
         </div>
-      ))}
+      ))} */}
       
       <Highlights/>
       <FAQ/>

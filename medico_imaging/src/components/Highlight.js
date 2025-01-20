@@ -161,10 +161,12 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { supabase } from '../supasbaseClient';
+import { useNavigate } from 'react-router-dom';
 
 export default function Highlights() {
   const [categories, setCategories] = React.useState([]);
   const [showAll, setShowAll] = React.useState(false);
+  const navigate = useNavigate(); // Initialize navigate
 
   // Fetch categories from Supabase
   React.useEffect(() => {
@@ -176,7 +178,7 @@ export default function Highlights() {
       const response = await supabase
         .from('Product Categories')
         .select('*')
-        .limit(10);
+        .limit(19);
 
       if (response.error) {
         throw response.error;
@@ -194,12 +196,17 @@ export default function Highlights() {
   // Handle showing more categories
   const categoriesToShow = showAll ? categories : categories.slice(0, 5);
 
+  const handleCardClick = (categoryId) => {
+    navigate(`/products/${categoryId}`); // Navigate to the products page with category ID
+  };
+
+
   return (
     <Box
       id="highlights"
       sx={{
-        pt: { xs: 4, sm: 8 },
-        pb: { xs: 8, sm: 16 },
+        pt: { xs: 4, sm: 0 },
+        pb: { xs: 8, sm: 8 },
         color: 'white',
         bgcolor: 'grey.100',
       }}
@@ -215,15 +222,12 @@ export default function Highlights() {
       >
         <Box
           sx={{
-            width: { sm: '100%', md: '60%' },
-            textAlign: { sm: 'left', md: 'center' },
+            width: { sm: '100%', md: '90%' },
+            textAlign: { sm: 'left', md: 'center'},
           }}
         >
           <Typography component="h2" variant="h4" gutterBottom>
-            Categories
-          </Typography>
-          <Typography variant="body1" sx={{ color: 'red' }}>
-            Discover the wide range of products available across various categories.
+           Discover the wide range of products available across various categories.
           </Typography>
         </Box>
         <Grid container spacing={2} sx={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -234,6 +238,7 @@ export default function Highlights() {
                 component={Card}
                 spacing={1}
                 useFlexGap
+                onClick={() => handleCardClick(category.id)} // Add onClick handler
                 sx={{
                   color: 'inherit',
                   p: 3,
@@ -245,7 +250,7 @@ export default function Highlights() {
                   justifyContent: 'space-between',
                 }}
               >
-                <Box sx={{ opacity: '50%' }}>
+                <Box sx={{ opacity: '90%' }}>
                   {/* Render an image based on the category */}
                   <img
                     src={category.image_url}
