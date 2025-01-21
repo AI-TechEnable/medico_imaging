@@ -196,8 +196,10 @@ export default function Highlights() {
   // Handle showing more categories
   const categoriesToShow = showAll ? categories : categories.slice(0, 5);
 
-  const handleCardClick = (categoryId) => {
-    navigate(`/products/${categoryId}`); // Navigate to the products page with category ID
+  const handleCardClick = (categoryId,categoryName) => {
+    const formattedCategoryName = categoryName.replace(/\s+/g, '-');
+
+    navigate(`/products/${categoryId}/${formattedCategoryName}`); // Navigate to the products page with category ID
   };
 
 
@@ -238,7 +240,7 @@ export default function Highlights() {
                 component={Card}
                 spacing={1}
                 useFlexGap
-                onClick={() => handleCardClick(category.id)} // Add onClick handler
+                onClick={() => handleCardClick(category.id,category.category_name)} // Add onClick handler
                 sx={{
                   color: 'inherit',
                   p: 3,

@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 
 export default function Products() {
   const { categoryId } = useParams(); // Get categoryId from URL
+  const {categoryName} = useParams();
+  console.log(categoryName);
   console.log('Category ID from URL:', categoryId);  // Log the categoryId to check its value
   const [products, setProducts] = useState([]);
 
@@ -50,7 +52,7 @@ export default function Products() {
 
   return (
     <Box sx={{ p: 4 }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom>                
         Products
       </Typography>
       <Grid container spacing={3}>
