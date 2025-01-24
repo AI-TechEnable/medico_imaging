@@ -11,7 +11,10 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
-import { CircularProgress } from '@mui/material';
+import { LinearProgress } from '@mui/material';
+import { FaFileCircleCheck } from 'react-icons/fa6';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
 export default function Products() {
   const { categoryId } = useParams();
@@ -96,6 +99,22 @@ export default function Products() {
       sx={{
         width: { xs: '250px', sm: '250px' },
         p: 2,
+        height: '100%', // Ensure it takes full height
+        overflowY: 'auto', // Enable vertical scrolling
+        '&::-webkit-scrollbar': {
+        width: '8px', // Adjust scrollbar width
+      },
+      '&::-webkit-scrollbar-track': {
+        backgroundColor: '#f0f0f0', // Background color of the track
+        borderRadius: '4px',
+      },
+      '&::-webkit-scrollbar-thumb': {
+        backgroundColor: '#888', // Color of the thumb
+        borderRadius: '4px',
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        backgroundColor: '#555', // Color of the thumb on hover
+      },
       }}
     >
       <Typography variant="h6" gutterBottom>
@@ -119,6 +138,7 @@ export default function Products() {
       <Divider />
     </Box>
   );
+  const currentCategory = categories.find((cat) => String(cat.id) === categoryId);
 
   return (
     <div>
@@ -159,11 +179,23 @@ export default function Products() {
             p: 4,
           }}
         >
+          {/* Breadcrumbs */}
+        <Breadcrumbs aria-label="breadcrumb" sx={{p:1}}>
+            <Link underline="hover" color="inherit" onClick={() => navigate('/')}>
+              Home
+            </Link>
+            <Link underline="hover" color="inherit" onClick={() => navigate('/products')}>
+              Products
+            </Link>
+            {currentCategory && (
+              <Typography color="text.primary">{currentCategory.category_name}</Typography>
+            )}
+          </Breadcrumbs>
           <Typography variant="h4" gutterBottom>
-            Equipments
+            
           </Typography>
           {loading ? (
-            <Typography variant="body1"> <CircularProgress/> </Typography>
+            <Typography variant="body1"> <LinearProgress /> </Typography>
           ) : products.length > 0 ? (
             <Box>
               {products.map((product) => (
@@ -212,15 +244,13 @@ export default function Products() {
                     {product.brochure_url && (
                       <Typography variant="body2" color="primary" gutterBottom>
                         <a href={product.brochure_url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          View Brochure
+                          View Brochure <FaFileCircleCheck/>
                         </a>
                       </Typography>
                     )}
                     <Typography variant="body2" color="text.secondary" gutterBottom>
                       {product.description}
                     </Typography>
-  
-                    
                   </Box>
                 </Box>
               ))}
