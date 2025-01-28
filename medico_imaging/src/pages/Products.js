@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import ListItemText from '@mui/material/ListItemText';  
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,6 +14,7 @@ import Drawer from '@mui/material/Drawer';
 import { LinearProgress } from '@mui/material';
 import { FaFileCircleCheck } from 'react-icons/fa6';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import '../styles/Products.css'
 import Link from '@mui/material/Link';
 
 export default function Products() {
@@ -251,6 +252,107 @@ export default function Products() {
                     <Typography variant="body2" color="text.secondary" gutterBottom>
                       {product.description}
                     </Typography>
+                    <div className="specifications-container">
+                      <h2>Specifications</h2>
+                      <div className="table-wrapper">
+                        <table className="specifications-table">
+                          <thead>
+                            <tr>
+                              <th>Property</th>
+                              <th>Value</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {Object.entries(product).map(([key, value]) => {
+                              // Define the specifications you want to display
+                              const specifications = [
+                                'model_name',
+                                'brand',
+                                'imaging_mode',
+                                'battery_backup',
+                                'touch_screen_monitor',
+                                'monitor_resolution',
+                                'monitor_size',
+                                'weight',
+                                'clinical_application',
+                                'connectivity_ports',
+                                'doppler_mode',
+                              ];
+
+                              if (specifications.includes(key) && value !== null && value !== '') {
+                                return (
+                                  <tr key={key}>
+                                    <td>{key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</td>
+                                    <td>{value}</td>
+                                  </tr>
+                                );
+                              }
+                              return null;
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    {/* <div class="specifications-container">
+  <h2>Specifications</h2>
+  <div class="table-wrapper">
+    <table class="specifications-table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Model Name/Number</td>
+          <td>Logiq V5</td>
+        </tr>
+        <tr>
+          <td>Brand</td>
+          <td>GE</td>
+        </tr>
+        <tr>
+          <td>Imaging Mode</td>
+          <td>2D</td>
+        </tr>
+        <tr>
+          <td>Battery Backup</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>Touch Screen Monitor</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>Monitor Resolution</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>Monitor Size</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>null</td>
+        </tr>
+        <tr>
+          <td>Clinical Application</td>
+          <td>OB/ GYN</td>
+        </tr>
+        <tr>
+          <td>Connectivity Ports</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Doppler Mode</td>
+          <td>Color Doppler Velocity</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> */}
+
                   </Box>
                 </Box>
               ))}
