@@ -1,4 +1,4 @@
-.specifications-container {
+/* .specifications-container {
   padding: 16px;
 }
 
@@ -30,4 +30,40 @@
 
 .specifications-table tr:hover {
   background-color: #f1f1f1;
+} */
+
+.specifications-container {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.specifications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.specifications-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.specifications-table tr:last-child td {
+  border-bottom: none;
+}
+
+.specifications-table td:first-child {
+  font-weight: 500;
+  color: #616161;
+  width: 40%;
+  min-width: 180px;
+}
+
+@media (max-width: 600px) {
+  .specifications-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
 }
