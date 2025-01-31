@@ -14,8 +14,8 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-import MonitorHeartTwoToneIcon from '@mui/icons-material/MonitorHeartTwoTone';
 import { Link } from 'react-router-dom';
+import logo from '../assets/medico_logo.png'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -67,7 +67,8 @@ export default function AppAppBar() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' } ,color:'#004D99' }}>
-              <MonitorHeartTwoToneIcon/>
+              {/* <MonitorHeartTwoToneIcon/> */}
+              <img src={logo} alt="Medico Logo" style={{ height: 20 }} />
               <Button variant="text" color="red" size="small" sx={{ color: 'black' }}>
                 Medico imaging services
               </Button>

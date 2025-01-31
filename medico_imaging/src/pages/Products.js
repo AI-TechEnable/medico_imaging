@@ -265,13 +265,6 @@ export default function Products() {
     </AppBar>
 
       <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden', paddingTop: '64px' }}>
-        {/* Mobile Menu Toggle */}
-        {/* <IconButton
-          sx={{ display: { xs: 'block', sm: 'none' }, position: 'absolute', top: 120, left: 16 }}
-          onClick={toggleMobileMenu}
-        >
-          <MenuIcon />
-        </IconButton> */}
 
         {/* Sidebar/Drawer */}
         <Drawer

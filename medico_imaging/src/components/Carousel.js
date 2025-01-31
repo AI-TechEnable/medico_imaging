@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material';
 import Slider from '../assets/Slider.json';
+import '../styles/Carousel.css'
 
 // Item component
 function Item({ item }) {
@@ -10,7 +11,9 @@ function Item({ item }) {
             <img 
                 src={item.image_url} 
                 alt={item.name} 
-                style={{ width: "100%", height: "60vh", objectFit: "cover" }} 
+                // style={{ width: "100%", height: "70vh", objectFit: "cover" }}  
+                className="carousel-image"  // Apply the class here
+                
             />
             
             {/* Transparent overlay at the bottom of the image */}

@@ -1,0 +1,12 @@
+.carousel-image {
+    width: 100%;
+    object-fit: cover;
+    height: 80vh; /* Default height for desktop */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-image {
+      height: 55vh; /* Adjust height for mobile */
+    }
+  }
+  
