@@ -83,7 +83,7 @@ export default function AppAppBar() {
           >
             {/* <p><Link to="/products">Explore Products</Link></p> */}
             <Button variant="text" color="info" size="small"sx={{ color: 'black' }}>
-            <Link to="/products">Explore Products</Link>
+            <Link to="/products/37/Sonography-Machine">Explore Products</Link>
             </Button>
             <Button variant="text" color="info" size="small" sx={{ color: 'black' }}>
               <Link to="/About">About Us</Link>
@@ -147,7 +147,7 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem>Explore Products</MenuItem>
+                <MenuItem >Explore Products</MenuItem>
                 <MenuItem>About Us</MenuItem>
                 <MenuItem>Highlights</MenuItem>
                 <MenuItem>Pricing</MenuItem>

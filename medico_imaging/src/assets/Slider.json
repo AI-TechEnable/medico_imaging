@@ -1,43 +1,43 @@
 [
     {
-      "id": 1,
+      "id": 37,
       "name": "Sonography Machine",
       "description": "A high-performance sonography machine used for diagnostic imaging. Features include high resolution and real-time imaging for various applications.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/sonography.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9zb25vZ3JhcGh5LmpwZyIsImlhdCI6MTczODMxODMwMiwiZXhwIjoxNzY5ODU0MzAyfQ.yVjE60_pxM5ichmb5-_TZzFJ8eMwGauk9RCLdoUAyXk"
     },
     {
-      "id": 2,
+      "id": 38,
       "name": "CR Machines",
       "description": "Computed Radiography (CR) systems for digital X-ray imaging, providing high-quality diagnostic images with quick processing times.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/cr.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9jci5qcGciLCJpYXQiOjE3MzgzMTgwMDEsImV4cCI6MTc2OTg1NDAwMX0.nXjO5KVHIy_gXeKZY6dHwrjtYhRu1YC-3fK7IrP3XNQ"
     },
     {
-      "id": 3,
+      "id": 39,
       "name": "Hospital Equipment",
       "description": "Comprehensive range of hospital equipment, including diagnostic imaging, monitoring, and therapeutic devices for healthcare facilities.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/hospital.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9ob3NwaXRhbC5qcGciLCJpYXQiOjE3MzgzMTkyNzksImV4cCI6MTc2OTg1NTI3OX0.aZBlD5YoRgGiG8vjyEHyxKHFK9S1xqifD5a41j5qRdw"
     },
     {
-      "id": 4,
+      "id": 40,
       "name": "X-Ray Machine",
       "description": "X-ray machine for a wide variety of diagnostic imaging needs, offering high-quality imaging with quick and efficient operation.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/xray.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS94cmF5LmpwZyIsImlhdCI6MTczODMyMTY0NywiZXhwIjoxNzY5ODU3NjQ3fQ.32qBnElb9HfUQn0lPpioeWw2XBkOmKMeB2C5KTZrydM"
     },
     {
-      "id": 5,
+      "id": 41,
       "name": "C Arm Machine",
       "description": "A versatile imaging system used in surgical and diagnostic applications, providing real-time X-ray images for guidance during procedures.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/c-arm.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9jLWFybS5qcGciLCJpYXQiOjE3MzgzMjIxMTQsImV4cCI6MTc2OTg1ODExNH0.psDXzAH6f__tUvHQymj4WxJjieNJM3htaoiP1iSuPjE"
     },
     {
-      "id": 6,
+      "id": 43,
       "name": "Refurbished CT Scanner",
       "description": "A refurbished CT scanner offering high-resolution imaging for detailed cross-sectional views of the body, suitable for a variety of diagnostic needs.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/ct-scan.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9jdC1zY2FuLmpwZyIsImlhdCI6MTczODMyMjkzNSwiZXhwIjoxNzY5ODU4OTM1fQ.L0hARXSYKXJGAzxW7Hq7Va7CCGozsNJCLnDdvAkvf94"
     },
 
     {
-      "id": 7,
+      "id": 44,
       "name": "Point Of Care Ultrasound",
       "description": "Portable ultrasound system designed for use at the point of care, enabling fast and accurate diagnostics in emergency or critical settings.",
       "image_url": "https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/ultrasound.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS91bHRyYXNvdW5kLmpwZyIsImlhdCI6MTczODMyMzk2OCwiZXhwIjoxNzY5ODU5OTY4fQ.ZD07ppqDKC62L1CSIViazoRuK2oe0vxzjFeUTQ3JgUE"

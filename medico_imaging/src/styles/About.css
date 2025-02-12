@@ -1,0 +1,16 @@
+.main{
+    background: linear-gradient(#F2F2F2,#004D99);
+    height: 180vh;
+    color: white;
+    padding: 40px;
+}
+
+.abt-text{
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 60px;
+    color: #004D99;
+    font-weight: 900;
+    margin-bottom: 30px;
+
+}

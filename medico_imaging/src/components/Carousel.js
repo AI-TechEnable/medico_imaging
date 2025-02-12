@@ -3,9 +3,15 @@ import Carousel from 'react-material-ui-carousel';
 import { Paper, Button } from '@mui/material';
 import Slider from '../assets/Slider.json';
 import '../styles/Carousel.css'
+import { useNavigate } from 'react-router-dom';
 
 // Item component
 function Item({ item }) {
+    const handleCardClick = (categoryId, categoryName) => {
+        const formattedCategoryName = categoryName.replace(/\s+/g, '-');
+        navigate(`/products/${categoryId}/${formattedCategoryName}`);
+      };
+    const navigate = useNavigate();
     return (
         <Paper style={{ position: "relative" }}>
             <img 
@@ -35,7 +41,7 @@ function Item({ item }) {
             >
                 <h2 style={{ fontVariant: "all-petite-caps",color:"White"}}>{item.name}</h2>
                 <p style={{ fontVariant: "all-petite-caps" }}>{item.description}</p>
-                <Button className="CheckButton" variant="outlined" style={{height: "25px",backgroundColor:"white"}}>
+                <Button className="CheckButton" variant="outlined" style={{height: "25px",backgroundColor:"white"}} onClick={() => handleCardClick(item.id, item.name)}>
                     Check it out!
                 </Button>
                 

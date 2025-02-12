@@ -1,0 +1,40 @@
+.business-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 20px;
+  }
+  
+  .business-info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .business-info-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .business-info-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .business-info-item {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .business-info-item strong {
+    color: #007bff;
+  }
+  
