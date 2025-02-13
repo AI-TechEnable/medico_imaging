@@ -16,6 +16,8 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import logo from '../assets/medico_logo.png'
+import {Modal,TextField} from '@mui/material';
+import emailjs from 'emailjs-com';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -35,6 +37,8 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false); // Modal state
+  const [formData, setFormData] = React.useState({ name: '', phone: '', message: '' }); // Form data
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -48,6 +52,52 @@ export default function AppAppBar() {
 
   const handlePopoverClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleModalOpen = (product) => {
+    // setSelectedProduct(product); // Set the selected product
+    setOpenModal(true); // Open the modal
+  };
+
+  const handleModalClose = () => {
+    setOpenModal(false); // Close the modal
+    setFormData({ name: '', phone: '', message: '' }); // Reset form data
+  };
+
+  const handleFormChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Send email using emailjs
+    emailjs
+      .send(
+        'service_wo4iwl7', // Replace with your EmailJS service ID
+        'template_v6faxrr', // Replace with your EmailJS template ID
+        {
+          // productName: selectedProduct.product_name,
+          userName: formData.name,
+          userPhone: formData.phone,
+          userMessage: formData.message,
+        },
+        '0nAiH-WmAmtum7CzU' // Replace with your EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log('Success:', response);
+          alert('Enquiry submitted successfully!');
+          handleModalClose();
+        },
+        (error) => {
+          console.log('Error:', error);
+          alert('Failed to send enquiry. Please try again.');
+        }
+      );
   };
 
   const open1 = Boolean(anchorEl);
@@ -66,10 +116,10 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Box sx={{ display: { xs: 'none', md: 'flex' } ,color:'#004D99' }}>
+            <Box sx={{ display: { xs: 'flex', md: 'flex' } ,color:'#004D99' }}>
               {/* <MonitorHeartTwoToneIcon/> */}
               <img src={logo} alt="Medico Logo" style={{ height: 20 }} />
-              <Button variant="text" color="red" size="small" sx={{ color: 'black' }}>
+              <Button variant="text" color="red" size="small" sx={{ color: 'black' }} href='/'>
                 Medico imaging services
               </Button>
             </Box>
@@ -95,6 +145,7 @@ export default function AppAppBar() {
                   aria-haspopup="true"
                   onMouseEnter={handlePopoverOpen}
                   onMouseLeave={handlePopoverClose}
+                  onClick={() => handleModalOpen()}
                 >
                   <LocalPostOfficeIcon/>  
                 </Typography>
@@ -169,6 +220,44 @@ export default function AppAppBar() {
           </Box>
         </StyledToolbar>
       </Container>
+      {/* Modal for Enquiry Form */}
+      <Modal open={openModal} onClose={handleModalClose}>
+        <Box sx={{ width: 400, p: 3, m: 'auto', mt: 10, bgcolor: 'white', borderRadius: 2, boxShadow: 3 }}>
+          {/* <Typography variant="h6">Enquire about {selectedProduct?.product_name}</Typography> */}
+          <form onSubmit={handleFormSubmit}>
+            <TextField
+              label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleFormChange}
+              fullWidth
+              required
+              sx={{ mb: 2 }}
+            />
+            <TextField
+              label="Phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleFormChange}
+              fullWidth
+              required
+              sx={{ mb: 2 }}
+            />
+            <TextField
+              label="Message"
+              name="message"
+              value={formData.message}
+              onChange={handleFormChange}
+              fullWidth
+              multiline
+              rows={4}
+              required
+              sx={{ mb: 2 }}
+            />
+            <Button variant="contained" type="submit" fullWidth sx={{backgroundColor:'#003366'}}>Submit</Button>
+          </form>
+        </Box>
+      </Modal>
     </AppBar>
   );
 }

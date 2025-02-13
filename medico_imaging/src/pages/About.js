@@ -3,6 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import AppAppBar from '../components/AppAppBar';
 import '../styles/About.css'
+import VerifiedIcon from '@mui/icons-material/Verified';
+// import Testimonials from '../components/Testimonials';
 
 const About = () => {
   return (
@@ -12,12 +14,30 @@ const About = () => {
         <meta name="description" content="Learn more about Medico Imaging and our products." />
       </Helmet>
       <AppAppBar/>
-      <section>
+      <section className='context'>
         <div className='abt-text'>
              About Us
         </div>
-        <h3>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3>
+        
+        {/* <img src='https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/About_banner.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9BYm91dF9iYW5uZXIuanBnIiwiaWF0IjoxNzM5NDI3OTU5LCJleHAiOjE3NzA5NjM5NTl9.biIEsCUJynRjM6TqfaGNdOIRVtYIUcxMaDu7HKyickk' alt='test'></img> */}
       </section>
+      {/* <h3>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3> */}
+
+      <div className="image-container">
+          <img
+            src="https://wfnkbftrclahkqvwmoqv.supabase.co/storage/v1/object/sign/Medico_data/About_banner.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZWRpY29fZGF0YS9BYm91dF9iYW5uZXIuanBnIiwiaWF0IjoxNzM5NDI3OTU5LCJleHAiOjE3NzA5NjM5NTl9.biIEsCUJynRjM6TqfaGNdOIRVtYIUcxMaDu7HKyickk"
+            alt="Banner"
+            className="context-img"
+          />
+          <div className="text-overlay">
+            <h2>MEDICO IMAGING SERVICES, Nashik</h2>
+            <p>IndiaMART Trust Seal Verified  <VerifiedIcon /></p>
+          </div>
+
+      </div>
+      <h3>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3>
+
+      {/* <Testimonials/> */}
       
     </div>
   );

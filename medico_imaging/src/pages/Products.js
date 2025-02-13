@@ -158,12 +158,14 @@ export default function Products() {
   const currentCategory = categories.find((cat) => String(cat.id) === categoryId);
   const handleReviewsClick = () => {
     // Handle Reviews click
-    console.log('Reviews clicked');
+    // console.log('Reviews clicked');
+    navigate(`/testimonials`);
   };
 
   const handleAboutUsClick = () => {
     // Handle About Us click
-    console.log('About Us clicked');
+    // console.log('About Us clicked');
+    navigate(`/About`);
   };
 
 

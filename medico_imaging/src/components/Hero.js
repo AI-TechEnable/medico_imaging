@@ -65,7 +65,8 @@ export default function Hero() {
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
+              width: { sm: '100%', md: '90%' },
+              fontSize:'large'
             }}
           >
             We are a trusted and trustedseal verified supplier, offering a wide array of high-quality refurbished medical equipment, including advanced imaging systems and diagnostic tools. Our products cater to the pharmaceutical, healthcare, and medical industries, ensuring that you receive the best in precision and reliability. With strict adherence to the highest industry standards, all of our refurbished equipment is sourced from renowned global vendors, guaranteeing accuracy and durability for a variety of medical applications. As an authorized seller on platforms like Indiamart, we are committed to delivering quality and building lasting relationships with our clients.
@@ -106,14 +107,14 @@ export default function Hero() {
           <Typography
             variant="caption"
             color="text.secondary"
-            sx={{ textAlign: 'center' }}
+            sx={{ textAlign: 'center' ,fontSize:'small'}}
           >
             For more information or to view our complete product catalog, please visit our full&nbsp;
-            <Link href="#" color="primary">
+            <Link href="/products/37/Sonography-Machine" color="primary">
             product listing
             </Link>
             &nbsp;&&nbsp; 
-            <Link href="#" color="primary">
+            <Link href="/testimonials" color="primary">
              Testimonials
             </Link>
           </Typography>

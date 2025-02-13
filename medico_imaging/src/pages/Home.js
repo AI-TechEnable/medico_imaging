@@ -9,12 +9,13 @@ import FAQ from '../components/Faq';
 import Footer from '../components/Footer';
 import Highlights from '../components/Highlight';
 import { supabase } from '../supasbaseClient';
+import Testimonials from '../components/Testimonials';
 
 
 const Home = () => {
 
   const[products,setProducts]=useState([]);
-  console.log(products);
+  // console.log(products);
 
   useEffect(()=>{
     getProducts();
@@ -55,6 +56,7 @@ const Home = () => {
       ))} */}
       
       <Highlights/>
+      <Testimonials/>
       <FAQ/>
       <Footer/>
       
