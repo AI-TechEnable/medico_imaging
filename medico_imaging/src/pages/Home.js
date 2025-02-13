@@ -15,7 +15,7 @@ import Testimonials from '../components/Testimonials';
 const Home = () => {
 
   const[products,setProducts]=useState([]);
-  // console.log(products);
+  console.log(products);
 
   useEffect(()=>{
     getProducts();
