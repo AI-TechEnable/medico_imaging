@@ -10,6 +10,7 @@ import ProductDetail from './pages/ProductDetail';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import './App.css';
+import ProductVideos from './pages/Product_videos';
 
 const App = () => {
   return (
@@ -26,6 +27,8 @@ const App = () => {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ProductVideos" element={< ProductVideos/>} />
+
         </Routes>
       </main>
 

@@ -56,10 +56,12 @@ const Home = () => {
       ))} */}
       
       <Highlights/>
+      <div className='background'>
       <Testimonials/>
-      <FAQ/>
-      <Footer/>
+      <div id='faqs'><FAQ/></div>
       
+      <Footer/>
+      </div>
       
     </div>
   );

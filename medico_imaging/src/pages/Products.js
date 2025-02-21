@@ -236,7 +236,7 @@ export default function Products() {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <img src={logo} alt="Medico Logo" style={{ height: 20 }} />
           <Typography variant="h6" color="black">
-            Medico Imaging Service
+            <a href='/'>Medico Imaging Service</a>
           </Typography>
         </Box>
         <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 2 }}>

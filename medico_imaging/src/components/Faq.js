@@ -21,30 +21,31 @@ export default function FAQ() {
     <Container
       id="faq"
       sx={{
-        pt: { xs: 4, sm: 12 },
-        pb: { xs: 8, sm: 16 },
+        pt: { xs: 2, sm: 2 },
+        pb: { xs: 8, sm: 12 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
+        gap: { xs: 3, sm: 4 },
       }}
     >
       <Typography
         component="h2"
         variant="h4"
         sx={{
-          color: 'text.primary',
+          color: 'white',
           width: { sm: '100%', md: '60%' },
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
         Frequently asked questions
       </Typography>
-      <Box sx={{ width: '100%' }}>
-        <Accordion
+      <Box sx={{ width: '100%'}}>
+      <Accordion
           expanded={expanded.includes('panel1')}
           onChange={handleChange('panel1')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -52,7 +53,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              What does Medico Imaging Services specialize in?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -61,16 +62,15 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing&nbsp;
-              <Link href="mailto:support@email.com">support@email.com</Link>
-              &nbsp;or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              Medico Imaging Services specializes in trading and supplying new and refurbished  <Link href="/products/37/Sonography-Machine">medical equipment</Link>, including ultrasound machines, X-ray machines, CT scanners, CR machines, mammography machines, and more. The company is also known for providing maintenance services for these products.
             </Typography>
           </AccordionDetails>
         </Accordion>
+
         <Accordion
           expanded={expanded.includes('panel2')}
           onChange={handleChange('panel2')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -78,7 +78,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+            Where is Medico Imaging Services located?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -87,15 +87,14 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              Medico Imaging Services is located at 2-204, Krishna Residency, Bankar Mala, Kathe Galli, Dwarka, Nashik - 422011, Maharashtra, India.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
           expanded={expanded.includes('panel3')}
           onChange={handleChange('panel3')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -103,7 +102,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+            What types of refurbished medical equipment are available?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -112,15 +111,23 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              The company offers a wide range of refurbished equipment such as:
+            </Typography>
+              <Typography component="ul" variant="body2" sx={{ pl: 2 }}>
+              <Typography component="li" variant="body2">Ultrasound Machines</Typography>
+              <Typography component="li" variant="body2">C-Arm Machines</Typography>
+              <Typography component="li" variant="body2">Color Doppler Machines</Typography>
+              <Typography component="li" variant="body2">CT Scanners</Typography>
+              <Typography component="li" variant="body2">Mammography Machines</Typography>
+              <Typography component="li" variant="body2">Endoscopy Machines</Typography>
+              <Typography component="li" variant="body2">Portable X-Ray Machines</Typography>
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
           expanded={expanded.includes('panel4')}
           onChange={handleChange('panel4')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -128,7 +135,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              Do you provide after-sales support?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -137,13 +144,87 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Yes, Medico Imaging Services provides comprehensive after-sales support, including installation training, operational training, onsite support, and user manuals for all their equipment.
             </Typography>
           </AccordionDetails>
         </Accordion>
+        <Accordion
+          expanded={expanded.includes('panel5')}
+          onChange={handleChange('panel5')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel5d-content"
+            id="panel5d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            How can I contact Medico Imaging Services for inquiries?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              <Typography component="li" variant="body2">Contact:  08048601157</Typography>
+              <Typography component="li" variant="body2">Email: </Typography>
+              <Typography component="li" variant="body2">Address: Visit their office at Krishna Residency, Dwarka, Nashik, Maharashtra.</Typography>
+              
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded.includes('panel6')}
+          onChange={handleChange('panel6')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel6d-content"
+            id="panel6d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            What is the customer satisfaction rating of Medico Imaging Services?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              The company has a customer satisfaction rating of 3.8/5 based on 45 reviews. Quality and delivery have been rated highly, at 85% and 83%, respectively.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion
+          expanded={expanded.includes('panel7')}
+          onChange={handleChange('panel7')}
+          sx={{borderRadius:'10px',marginBottom:'2px'}}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel7d-content"
+            id="panel6d-header"
+          >
+            <Typography component="h3" variant="subtitle2">
+            What is the customer satisfaction rating of Medico Imaging Services?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+            >
+              The company has a customer satisfaction rating of 3.8/5 based on 45 reviews. Quality and delivery have been rated highly, at 85% and 83%, respectively.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
       </Box>
     </Container>
   );

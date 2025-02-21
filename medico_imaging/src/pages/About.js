@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import AppAppBar from '../components/AppAppBar';
 import '../styles/About.css'
 import VerifiedIcon from '@mui/icons-material/Verified';
+import Footer from '../components/Footer';
 // import Testimonials from '../components/Testimonials';
 
 const About = () => {
@@ -31,13 +32,14 @@ const About = () => {
           />
           <div className="text-overlay">
             <h2>MEDICO IMAGING SERVICES, Nashik</h2>
-            <p>IndiaMART Trust Seal Verified  <VerifiedIcon /></p>
+            <a href='https://trustseal.indiamart.com/members/medicoimaging'><p>IndiaMART Trust Seal Verified  <VerifiedIcon /></p></a>
           </div>
 
       </div>
       <h3>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3>
 
       {/* <Testimonials/> */}
+      <Footer/>
       
     </div>
   );

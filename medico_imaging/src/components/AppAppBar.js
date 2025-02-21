@@ -117,8 +117,7 @@ export default function AppAppBar() {
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Box sx={{ display: { xs: 'flex', md: 'flex' } ,color:'#004D99' }}>
-              {/* <MonitorHeartTwoToneIcon/> */}
-              <img src={logo} alt="Medico Logo" style={{ height: 20 }} />
+              <img src={logo} alt="Medico Logo" style={{ height: 25 }} />
               <Button variant="text" color="red" size="small" sx={{ color: 'black' }} href='/'>
                 Medico imaging services
               </Button>
@@ -138,7 +137,8 @@ export default function AppAppBar() {
             <Button variant="text" color="info" size="small" sx={{ color: 'black' }}>
               <Link to="/About">About Us</Link>
             </Button>
-            <Button color="primary" variant="text" size="small">
+          </Box>
+          <Button color="primary" variant="text" size="small">
             <div>
                 <Typography
                   aria-owns={open1 ? 'mouse-over-popover' : undefined}
@@ -169,8 +169,6 @@ export default function AppAppBar() {
                 </Popover>
               </div>
             </Button>
-     
-          </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
             {/* <ColorModeIconDropdown size="medium" /> */}
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -226,7 +224,7 @@ export default function AppAppBar() {
           {/* <Typography variant="h6">Enquire about {selectedProduct?.product_name}</Typography> */}
           <form onSubmit={handleFormSubmit}>
             <TextField
-              label="Name"
+              label="Email"
               name="name"
               value={formData.name}
               onChange={handleFormChange}
