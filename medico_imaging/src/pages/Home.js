@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import Highlights from '../components/Highlight';
 import { supabase } from '../supasbaseClient';
 import Testimonials from '../components/Testimonials';
+import VideoShowcase from '../components/VideoShowcase';
 
 
 const Home = () => {
@@ -58,7 +59,10 @@ const Home = () => {
       <Highlights/>
       <div className='background'>
       <Testimonials/>
+      <div id='video'><VideoShowcase/></div>
       <div id='faqs'><FAQ/></div>
+      
+
       
       <Footer/>
       </div>

@@ -112,7 +112,7 @@ export default function Highlights() {
                   justifyContent: 'space-between',
                 }}
               >
-                <Box sx={{ opacity: '90%' }}>
+                <Box sx={{ opacity: '90%', height: '200px', overflow: 'hidden' }}>
                   <img
                     src={category.image_url || '/fallback-image.png'}
                     alt={category.category_name || 'Category'}

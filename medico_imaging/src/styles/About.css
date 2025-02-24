@@ -6,7 +6,7 @@
 }
 
 .abt-text{
-    margin-top: 20vh;
+    margin-top: 10vh;
     text-align: center;
     font-size: 60px;
     color: #004D99;
@@ -22,17 +22,17 @@ h3{
 
 .image-container {
     position: relative;
-    width: 100%;
+    width: auto;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
   }
   
   .context-img {
-    height: 70vh;
+    height: 60vh;
     width: 100%;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
     object-fit: cover;
   }
   

@@ -36,7 +36,8 @@ export default function Footer() {
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 2 },
         textAlign: { sm: 'center', md: 'left' },
-        
+        // borderTop: '1px solid',
+        //   borderColor: 'white',
       }}
     >
       <Box

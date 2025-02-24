@@ -5,6 +5,7 @@ import AppAppBar from '../components/AppAppBar';
 import '../styles/About.css'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Footer from '../components/Footer';
+import AboutUs from '../components/About_us';
 // import Testimonials from '../components/Testimonials';
 
 const About = () => {
@@ -36,9 +37,9 @@ const About = () => {
           </div>
 
       </div>
-      <h3>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3>
-
-      {/* <Testimonials/> */}
+      
+      <h3 style={{marginTop:'20px'}}>We are one of the leading traders and suppliers of New And Refurbished Medical Equipment & Machines, which is known for providing accurate results and minimal maintenance. In addition to this, we excel in rendering Maintenance Services for the same.</h3>
+      <AboutUs/>
       <Footer/>
       
     </div>

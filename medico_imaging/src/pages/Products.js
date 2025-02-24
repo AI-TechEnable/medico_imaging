@@ -20,6 +20,7 @@ import logo from '../assets/medico_logo.png'
 import {AppBar,Toolbar,Button,Modal,TextField} from '@mui/material';
 import emailjs from 'emailjs-com';
 
+
 export default function Products() {
   const { categoryId } = useParams();
   const navigate = useNavigate();
@@ -162,6 +163,12 @@ export default function Products() {
     navigate(`/testimonials`);
   };
 
+  const handleHomeClick = () => {
+    // Handle Reviews click
+    // console.log('Reviews clicked');
+    navigate(`/`);
+  };
+
   const handleAboutUsClick = () => {
     // Handle About Us click
     // console.log('About Us clicked');
@@ -240,6 +247,14 @@ export default function Products() {
           </Typography>
         </Box>
         <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: 2 }}>
+        <Typography
+            variant="h6"
+            color="black"
+            sx={{ cursor: 'pointer' }}
+            onClick={handleHomeClick}
+          >
+            Home
+          </Typography>
           <Typography
             variant="h6"
             color="black"
@@ -516,7 +531,6 @@ export default function Products() {
         </Box>
       </Modal>
 
-      
     </div>
   );
 }

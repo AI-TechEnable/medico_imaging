@@ -67,3 +67,7 @@
     font-size: 0.9rem;
   }
 }
+
+.foot{
+  background: linear-gradient(#f2f2f2,#003366);
+}
