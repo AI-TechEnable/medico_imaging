@@ -1,37 +1,3 @@
-/* .specifications-container {
-  padding: 16px;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
-.specifications-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-}
-
-.specifications-table th,
-.specifications-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.specifications-table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
-.specifications-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.specifications-table tr:hover {
-  background-color: #f1f1f1;
-} */
-
 .specifications-container {
   margin-top: 2rem;
   border-top: 1px solid #eee;

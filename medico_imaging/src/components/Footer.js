@@ -67,32 +67,6 @@ export default function Footer() {
             <a href="https://maps.app.goo.gl/veKRQds3PNbaHXE29">2- 204, Krishna Residency, Bankar Mala, Kathe Galli Dwarka, Nashik - 422011, Maharashtra, India</a>
             </Typography>
             <Typography variant="body2" sx={{mb: 1 }}>Call 08048601157 for Quick Support</Typography>
-            {/* <InputLabel htmlFor="email-newsletter" sx={{color: 'white',textDecoration: 'none', }}>Email</InputLabel>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="email-newsletter"
-                hiddenLabel
-                size="small"
-                // variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': 'Enter your email address',
-                  },
-                }}
-                sx={{ width: '250px' ,color: 'white',textDecoration: 'none','&:hover': { color: 'gold' }}}
-              />
-              <Button
-                variant="contained"
-                size="small"
-                sx={{ flexShrink: 0 ,backgroundColor:'#003366'}}
-              >
-                Subscribe
-              </Button>
-            </Stack> */}
             <div className='Footer_mart' style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
               <span>
               <img src='https://td.imimg.com/css/tsLg1.png' alt='mart'></img>
@@ -189,7 +163,7 @@ export default function Footer() {
           <Link color="text.secondary" variant="body2" href="https://www.indiamart.com/terms-of-use.html" sx={{color: 'white',textDecoration: 'none','&:hover': { color: 'gold' }, }}>
             Privacy
           </Link>
-          <Link color="text.secondary" variant="body2" href="#" sx={{color: 'white',textDecoration: 'none','&:hover': { color: 'gold' }, }}>
+          <Link color="text.secondary" variant="body2" href="/Contact" sx={{color: 'white',textDecoration: 'none','&:hover': { color: 'gold' }, }}>
             Contact
           </Link>
         </Box>

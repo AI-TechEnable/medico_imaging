@@ -38,13 +38,34 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
   const [openModal, setOpenModal] = React.useState(false); // Modal state
-  const [formData, setFormData] = React.useState({ name: '', phone: '', message: '' }); // Form data
-
+  const [formData, setFormData] = React.useState({ name: '', phone: '', message: '',product: '', }); // Form data
+  const [selectedProduct, setSelectedProduct] = React.useState('');
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
+  const productCategories = [
+    'Sonography Machine',
+    'CR Machines',
+    'Hospital Equipment',
+    'X-Ray Machine',
+    'C Arm Machine',
+    'Refurbished Medical Machines',
+    'Refurbished Ct Scanner',
+    'Point Of Care Ultrasound',
+    'CT Scanner',
+    'D R SYSTEM',
+    'Diagnostic Services',
+    'Portable X Ray Machine',
+    'Old CT Scan',
+    'Ultrasound Colour Doppler Machine',
+    'Cr Systems',
+    'Old Cathlab',
+    'Ct Scan Machine'
+  ];
+
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const phoneNumber = '08048601157';
 
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -61,7 +82,7 @@ export default function AppAppBar() {
 
   const handleModalClose = () => {
     setOpenModal(false); // Close the modal
-    setFormData({ name: '', phone: '', message: '' }); // Reset form data
+    setFormData({ name: '', phone: '', message: '',product:'', }); // Reset form data
   };
 
   const handleFormChange = (e) => {
@@ -80,7 +101,7 @@ export default function AppAppBar() {
         'service_wo4iwl7', // Replace with your EmailJS service ID
         'template_v6faxrr', // Replace with your EmailJS template ID
         {
-          // productName: selectedProduct.product_name,
+          productName: selectedProduct,
           userName: formData.name,
           userPhone: formData.phone,
           userMessage: formData.message,
@@ -196,21 +217,20 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem >Explore Products</MenuItem>
-                <MenuItem>About Us</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem component={Link} to="/products/37/Sonography-Machine">Explore Products</MenuItem>
+                <MenuItem component={Link} to="/About">About Us</MenuItem>
+                <MenuItem component={Link} to="/ProductVideos">Product Videos</MenuItem>
+                <MenuItem component={Link} to="/testimonials">Testimonials</MenuItem>
+                <MenuItem component={Link} to="/Contact">Contact</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
+                  <Button color="primary" variant="contained" fullWidth href='/Contact'>
+                    Enquiry Form
                   </Button>
                 </MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
+                  <Button color="primary" variant="outlined" fullWidth component="a"href={`tel:${phoneNumber}`}>
+                  Call {phoneNumber}
                   </Button>
                 </MenuItem>
               </Box>
@@ -221,7 +241,8 @@ export default function AppAppBar() {
       {/* Modal for Enquiry Form */}
       <Modal open={openModal} onClose={handleModalClose}>
         <Box sx={{ width: 400, p: 3, m: 'auto', mt: 10, bgcolor: 'white', borderRadius: 2, boxShadow: 3 }}>
-          {/* <Typography variant="h6">Enquire about {selectedProduct?.product_name}</Typography> */}
+          <Typography variant="h6">Get in touch with us for all your Medical and Hospital Equipment needs.</Typography>
+
           <form onSubmit={handleFormSubmit}>
             <TextField
               label="Email"
@@ -241,6 +262,25 @@ export default function AppAppBar() {
               required
               sx={{ mb: 2 }}
             />
+            <TextField
+            select
+            label="Product"
+            name="product"
+            value={formData.product}
+            onChange={(e) => {
+              handleFormChange(e);
+              setSelectedProduct(e.target.value);
+            }}
+            fullWidth
+            required
+            sx={{ mb: 2 }}
+          >
+            {productCategories.map((category, index) => (
+              <MenuItem key={index} value={category}>
+                {category}
+              </MenuItem>
+            ))}
+          </TextField>
             <TextField
               label="Message"
               name="message"

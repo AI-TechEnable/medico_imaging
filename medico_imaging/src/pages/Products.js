@@ -19,6 +19,8 @@ import Link from '@mui/material/Link';
 import logo from '../assets/medico_logo.png'
 import {AppBar,Toolbar,Button,Modal,TextField} from '@mui/material';
 import emailjs from 'emailjs-com';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome,faSquarePhone} from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Products() {
@@ -158,20 +160,22 @@ export default function Products() {
 
   const currentCategory = categories.find((cat) => String(cat.id) === categoryId);
   const handleReviewsClick = () => {
-    // Handle Reviews click
-    // console.log('Reviews clicked');
     navigate(`/testimonials`);
   };
 
+  const handleVideosClick = () => {
+    navigate(`/ProductVideos`);
+  };
+
+  const handleContactClick = () => {
+    navigate(`/Contact`);
+  };
+
   const handleHomeClick = () => {
-    // Handle Reviews click
-    // console.log('Reviews clicked');
     navigate(`/`);
   };
 
   const handleAboutUsClick = () => {
-    // Handle About Us click
-    // console.log('About Us clicked');
     navigate(`/About`);
   };
 
@@ -183,7 +187,7 @@ export default function Products() {
 
   const handleModalClose = () => {
     setOpenModal(false); // Close the modal
-    setFormData({ name: '', phone: '', message: '' }); // Reset form data
+    setFormData({ name: '', phone: '', message: '',product:'', }); // Reset form data
   };
 
   const handleFormChange = (e) => {
@@ -253,7 +257,15 @@ export default function Products() {
             sx={{ cursor: 'pointer' }}
             onClick={handleHomeClick}
           >
-            Home
+            <FontAwesomeIcon icon={faHome} />
+          </Typography>
+          <Typography
+            variant="h6"
+            color="black"
+            sx={{ cursor: 'pointer' }}
+            onClick={handleVideosClick}
+          >
+            Videos
           </Typography>
           <Typography
             variant="h6"
@@ -267,15 +279,40 @@ export default function Products() {
             variant="h6"
             color="black"
             sx={{ cursor: 'pointer' }}
+            onClick={handleContactClick}
+          >
+            Contact
+          </Typography>
+          <Typography
+            variant="h6"
+            color="black"
+            sx={{ cursor: 'pointer' }}
             onClick={handleAboutUsClick}
           >
             About Us
           </Typography>
         </Box>
+
         <IconButton
-          sx={{ display: { xs: 'block', sm: 'none' }, position: 'absolute', top: 10, right: 16 }}
+          sx={{ display: { xs: 'flex', sm: 'none' },gap:'5px', position: 'absolute', top: 10, right: 16 }}
           onClick={toggleMobileMenu}
         >
+          <Typography
+            variant="h6"
+            color="black"
+            sx={{ cursor: 'pointer',fontSize:'medium'}}
+            onClick={handleHomeClick}
+          >
+            <FontAwesomeIcon icon={faHome} />
+          </Typography>
+          <Typography
+            variant="h6"
+            color="black"
+            sx={{ cursor: 'pointer',fontSize:'medium'}}
+            onClick={handleContactClick}
+          >
+            <FontAwesomeIcon icon={faSquarePhone} />
+          </Typography>
           <MenuIcon />
         </IconButton>
       </Toolbar>

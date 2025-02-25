@@ -30,6 +30,7 @@ const AboutUsContainer = styled.div`
   margin: 0 auto;
   line-height: 1.6;
   color: #333;
+  margin-bottom:40px;
 
   @media (max-width: 768px) {
     padding: 15px;
